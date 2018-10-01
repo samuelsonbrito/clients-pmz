@@ -12,13 +12,16 @@
   <div class="cadastro">
       <form [formGroup]="clientForm" (submit)="save()">
           <div class="form-row">
-            <div class="form-group col-md-5">
+            <div class="form-group col-md-5" style="margin-right: 50px;">
               <label for="">Nome completo</label>
               <input formControlName="name" type="text" class="form-control">
             </div>
             <div class="form-group col-md-2">
               <label for="">Registro</label>
-              <input  formControlName="register" type="checkbox" name="" id="" class="form-control text-left">
+              <label class="checkmarkd">Ativo
+                  <input type="checkbox"  formControlName="register">
+                  <span class="checkmark"></span>
+                </label>
             </div>
             <div class="form-group col-md-2">
                 <button class="btn btn-outline-secondary float-right botao" [routerLink]="['']">Cancelar</button>
