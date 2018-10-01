@@ -1,0 +1,16 @@
+.cadastro{
+    border-top: 9px solid #1D334B; 
+    border-bottom: 1px solid #1D334B; 
+    border-right: 1px solid #1D334B;
+    border-collapse:separate; 
+    border-spacing:5px 5px;
+}
+
+.botao{
+    margin-top: 20px;
+}
+
+.active tr{
+    background-color:#123456 !important;
+    color: white;
+}

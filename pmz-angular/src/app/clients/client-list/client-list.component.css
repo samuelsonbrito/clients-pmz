@@ -1,0 +1,22 @@
+.table-wrapper-scroll-y {
+    display: block;
+    max-height: 355px;
+    overflow-y: auto;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+thead tr th{
+    border-top: 9px solid #1D334B; 
+    border-bottom: 1px solid #1D334B; 
+    border-collapse:separate; 
+    border-spacing:5px 5px;
+}
+
+.circle-red {
+    background: radial-gradient(circle closest-side,#F03C3C 0%,#F03C3C 98%,rgba(0,0,0,0) 100%);
+    width:15px;height:15px;float:left;margin:8px;
+}
+.circle-green {
+    background: radial-gradient(circle closest-side,#4CC371 0%,#4CC371 98%,rgba(0,0,0,0) 100%);
+    width:15px;height:15px;float:left;margin:8px;
+}

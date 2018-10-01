@@ -1,0 +1,35 @@
+<div class="container" style="margin-top: 50px;">
+
+    <div class="row" style="margin-bottom: 30px;">
+        <div class="col-6">
+          <div class="float-left">
+            <div style="font-size: 20px; text-align: left">Sistema TI <br><b>Novo Cadastro</b></div>
+          </div>
+        </div>
+
+      </div>
+
+  <div class="cadastro">
+      <form [formGroup]="clientForm" (submit)="save()">
+          <div class="form-row">
+            <div class="form-group col-md-5">
+              <label for="">Nome completo</label>
+              <input formControlName="name" type="text" class="form-control">
+            </div>
+            <div class="form-group col-md-2">
+              <label for="">Registro</label>
+              <input  formControlName="register" type="checkbox" name="" id="" class="form-control text-left">
+            </div>
+            <div class="form-group col-md-2">
+                <button class="btn btn-outline-secondary float-right botao" [routerLink]="['']">Cancelar</button>
+              </div>
+            <div class="form-group col-md-2">
+                <button class="btn btn-default botao" [disabled]="clientForm.invalid">Salvar cadastro</button>
+            </div>
+          </div>
+        </form>
+  </div>
+
+
+
+  </div>

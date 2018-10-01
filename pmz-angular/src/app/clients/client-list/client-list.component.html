@@ -1,0 +1,57 @@
+<div class="container text-center" style="margin-top: 50px;">
+  <!-- <pmz-client *ngFor="let client of clients" [url]="client.url" [description]="client.description"> -->
+
+  <!-- </pmz-client> -->
+
+  <div class="row" style="margin-bottom: 30px;">
+    <div class="col-6">
+      <div class="float-left">
+        <div style="font-size: 20px; text-align: left">Bem vindo(a) ao <br><b>Sistema TI</b></div>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <button class="btn btn-outline-secondary float-right" [routerLink]="['/cliente/add']">Novo cadastro</button>
+    </div>
+  </div>
+
+  <div class="table-wrapper-scroll-y">
+
+    <table class="table table-border table-hover">
+      <thead>
+        <tr>
+          <th class="text-left">Código</th>
+          <th class="text-left">Nome completo</th>
+          <th class="text-left">Registro</th>
+          <th class="text-left"></th>
+        </tr>
+      </thead>
+  
+      <tbody>
+  
+        <tr *ngFor="let client of clients; let i = index" (click)="setClickedRow(i)" [style.background-color]="i == selectedRow ? 'rgba(0, 1, 0, 0.1)' : ''">
+          <td class="text-left">{{ client.id }}</td>
+          <td class="text-left">{{ client.name }}</td>
+          <td class="text-left">
+            <div *ngIf="client.register == true"><div class="circle-green"></div> Ativo</div>
+            <div *ngIf="client.register == false"><div class="circle-red"></div> Inativo</div>
+          </td>
+          <td class="text-rigth">
+              <div *ngIf="i == selectedRow">
+                <button type="button" class="btn btn-outline-secondary btn-sm" style="margin-right: 20px;" [routerLink]="['/cliente/',client.id]">Editar</button>
+                <button type="button" class="btn btn-outline-secondary btn-sm" (click)="remove(client.id)">Excluir</button>
+              </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <app-vmessage text="Cadastrado com sucesso" type="success" *ngIf="statusMessage == 's'">
+  </app-vmessage>
+  <app-vmessage text="Atualizado com sucesso" type="success" *ngIf="statusMessage == 'u'">
+  </app-vmessage>
+  <app-vmessage text="Removido com sucesso" type="success" *ngIf="statusMessage == 'r'">
+    </app-vmessage>
+</div>
