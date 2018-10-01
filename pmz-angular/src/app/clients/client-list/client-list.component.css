@@ -12,6 +12,11 @@ thead tr th{
     border-spacing:5px 5px;
 }
 
+table{
+    border-right: 1px solid #1D334B; 
+
+}
+
 .circle-red {
     background: radial-gradient(circle closest-side,#F03C3C 0%,#F03C3C 98%,rgba(0,0,0,0) 100%);
     width:15px;height:15px;float:left;margin:8px;
